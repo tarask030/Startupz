@@ -11,11 +11,16 @@ const config: Config = {
       transitionTimingFunction: {
         DEFAULT: 'easy-in-out',
       },
+      fontFamily: {
+        circular_400: ['Circular-400', 'sans-serif'],
+        circular_700: ['Circular-700', 'sans-serif'],
+      },
     },
     transitionDuration: {
       DEFAULT: '300ms',
     },
     screens: {
+      smm: '546px',
       sm: '640px',
       md: '768px',
       lg: '1024px',

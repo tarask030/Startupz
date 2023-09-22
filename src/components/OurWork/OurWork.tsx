@@ -44,9 +44,9 @@ export const OurWork = () => {
 
   return (
     <div className='flex justify-center'>
-      <div className='w-[1568px] px-16 pt-[140px] pb-[180px]'>
+      <div className='w-[1568px] px-8 pt-[140px] pb-[180px] md:px-16'>
         <H3 className='text-center'>Our work</H3>
-        <div className='grid grid-cols-2 gap-6 mt-14'>
+        <div className='grid grid-cols-1 gap-6 mt-14 md:grid-cols-2'>
           {data.map(({ title, titleColor, subtitle, image, action }, index) => {
             return (
               <OurWorkTile

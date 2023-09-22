@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Circular-400';
+  src: url('../../public/fonts/CircularStd-Book.woff2');
+}
+
+@font-face {
+  font-family: 'Circular-700';
+  src: url('../../public/fonts/CircularStd-Book.woff2');
+}

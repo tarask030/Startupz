@@ -5,18 +5,17 @@ import clsx from 'clsx'
 
 export const Header = () => {
   return (
-    <div className='flex justify-center items-end pt-[118px]'>
+    <div className='flex justify-center pt-[70px] items-end md:pt-[118px]'>
       <div
         className={clsx(
-          'w-[1568px] px-16 pt-[140px] pb-[165px] flex justify-start',
-          '2xl:pl-1 2xl:-translate-x-6 2xl:justify-center'
+          'w-[1568px] px-8 pt-[140px] pb-[165px] flex justify-start md:px-16'
         )}
       >
         <div>
-          <H1 className='leading-[85px]'>
+          <H1 className='leading-[55px] font-circular md:leading-[85px]'>
             We Create <br /> Startups.
           </H1>
-          <H5 className='text-orange-500 max-w-[900px] mt-[32px]'>
+          <H5 className='text-orange-500 max-w-[900px] mt-[32px] font-circular'>
             We are startup studio that develops and launches new companies.
           </H5>
           <Button
@@ -27,7 +26,7 @@ export const Header = () => {
           />
         </div>
       </div>
-      <div className='w-full max-w-[650px]'>
+      <div className={clsx('md:max-w-[650px] absolute right-0 w-[50%]')}>
         <Image priority src={MainImage} alt='Man' />
       </div>
     </div>

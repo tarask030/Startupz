@@ -5,7 +5,7 @@ import QuestionMark from 'assets/images/question-mark.png'
 export const WhoWeAre = () => {
   return (
     <div className='bg-gray-300 flex justify-center'>
-      <div className='w-[1568px] px-16 pt-[172px] pb-[196px]'>
+      <div className='w-[1568px] px-8 pt-[172px] pb-[196px] md:px-16'>
         <div>
           <div className='flex justify-between'>
             <div>
@@ -21,7 +21,7 @@ export const WhoWeAre = () => {
               <Image src={QuestionMark} alt='Question mark' />
             </div>
           </div>
-          <div className='flex gap-x-20 mt-20'>
+          <div className='flex flex-col gap-x-20 mt-20 md:flex-row'>
             <NumberList
               title='01'
               subtitle='We develop innovative products, systems and services'

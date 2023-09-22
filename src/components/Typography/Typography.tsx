@@ -10,14 +10,14 @@ export type TextProps = {
 }
 
 const styles = {
-  h1: 'text-[85px] font-bold', //85px
-  h2: 'text-6xl font-bold', //48px
-  h3: 'text-[50px] font-bold', //50px
-  h4: 'text-[32px] font-bold', //32px
-  h5: 'text-2xl font-normal', //24px
-  h6: 'text-2xl font-normal', //20px
-  p: 'text-base font-normal', //16px
-  label: 'text-xs font-semibold', //12px
+  h1: 'text-[40px] font-bold font-circular_700 md:text-[85px]', //85px
+  h2: 'text-[24px] font-bold font-circular_700 md:text-6xl', //48px
+  h3: 'text-[25px] font-bold font-circular_700 md:text-[50px]', //50px
+  h4: 'text-[22px] font-bold font-circular_700 md:text-[25px] lg:text-[32px]', //32px
+  h5: 'text-[22px] font-normal font-circular_400 md:text-2xl', //24px
+  h6: 'text-[14px] font-normal font-circular_400 md:text-2xl', //20px
+  p: 'text-base font-normal font-circular_400', //16px
+  label: 'text-[20px] font-semibold md:text-[40px]',
 }
 
 const TypographyComponent = ({

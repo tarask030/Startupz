@@ -5,14 +5,14 @@ import LightBulb from 'assets/images/light-bulb.png'
 export const OurCoreValues = () => {
   return (
     <div className='bg-gray-300 flex justify-center'>
-      <div className='w-[1568px] px-16 pt-[172px] pb-[196px]'>
+      <div className='w-[1568px] px-8 pt-[172px] pb-[196px] md:px-16 '>
         <div className='flex w-full justify-between'>
           <H2>Our core values</H2>
           <div className='w-28 '>
             <Image priority src={LightBulb} alt='Light' />
           </div>
         </div>
-        <div className='flex gap-x-[74px] mt-[117px]'>
+        <div className='flex flex-col gap-y-[74px] mt-[42px] md:flex-row md:gap-x-[74px] md:mt-[117px]'>
           <NumberList
             title='01. Innovation'
             subtitle='Startupz operates where entrepreneurship and technology intersect.

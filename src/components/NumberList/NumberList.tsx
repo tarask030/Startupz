@@ -1,3 +1,5 @@
+import { H4 } from 'components'
+
 interface INumberList {
   title: string
   subtitle: string
@@ -5,8 +7,8 @@ interface INumberList {
 
 export const NumberList = ({ title, subtitle }: INumberList) => (
   <div className='flex flex-col'>
-    <span className='text-[30px] text-orange-500'>{title}</span>
+    <H4 className='text-orange-500'>{title}</H4>
     <div className='border-b w-[50px] mt-[30px] mb-[25px]' />
-    <span className='text-[30px]'>{subtitle}</span>
+    <H4>{subtitle}</H4>
   </div>
 )
