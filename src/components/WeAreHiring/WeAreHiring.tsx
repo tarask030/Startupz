@@ -1,4 +1,4 @@
-import { AnimationSection, Button, H2, H5 } from 'components'
+import { AnimationContainer, Button, H2, H5 } from 'components'
 import Image from 'next/image'
 import Girl from 'assets/images/we-are-hiring/girl.png'
 import Man from 'assets/images/we-are-hiring/man.png'
@@ -17,31 +17,29 @@ export const WeAreHiring = () => {
       <div className='w-full max-w-[400px]'>
         <Image priority src={Girl} alt='Girl' />
       </div>
-      <div
-        className={clsx(
+      <AnimationContainer
+        classNames={clsx(
           'w-[1568px] px-8 pt-[90px] pb-[100px] flex justify-center',
           'md:px-16 md:pt-[140px] md:pb-[165px]'
         )}
       >
-        <AnimationSection>
-          <div className='text-center'>
-            <H2>We are hiring!</H2>
-            <H5 className='text-orange-500 max-w-[440px] mt-[30px]'>
-              We&apos;re always looking for talented people <br />
-              to join and help build our startups. <br /> Check out our current
-              openings
-            </H5>
-            <div className='flex justify-center'>
-              <Button
-                text='See current openings'
-                backgroundColor='blue'
-                className='mt-[30px]'
-                action={handleTurnToContact}
-              />
-            </div>
+        <div className='text-center'>
+          <H2>We are hiring!</H2>
+          <H5 className='text-orange-500 max-w-[440px] mt-[30px]'>
+            We&apos;re always looking for talented people <br />
+            to join and help build our startups. <br /> Check out our current
+            openings
+          </H5>
+          <div className='flex justify-center'>
+            <Button
+              text='See current openings'
+              backgroundColor='blue'
+              className='mt-[30px]'
+              action={handleTurnToContact}
+            />
           </div>
-        </AnimationSection>
-      </div>
+        </div>
+      </AnimationContainer>
       <div className='w-full max-w-[400px]'>
         <Image priority src={Man} alt='Man' />
       </div>

@@ -4,9 +4,13 @@ import { useEffect, useRef, ReactNode, useState, MutableRefObject } from 'react'
 
 interface SectionProps {
   children: ReactNode
+  classNames: string
 }
 
-export const AnimationSection: React.FC<SectionProps> = ({ children }) => {
+export const AnimationContainer: React.FC<SectionProps> = ({
+  children,
+  classNames,
+}) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const onScreen: boolean = useOnScreen<HTMLDivElement>(
@@ -23,6 +27,7 @@ export const AnimationSection: React.FC<SectionProps> = ({ children }) => {
     <div
       ref={ref}
       className={clsx(
+        classNames,
         isHidden
           ? 'opacity-0'
           : 'opacity-100 delay-300 duration-500 transition-all'

@@ -2,7 +2,7 @@ import Tolq from 'assets/images/our-work/tolq.png'
 import FeedbackLabs from 'assets/images/our-work/feedback-labs.png'
 import Codekeeper from 'assets/images/our-work/codekeeper.png'
 import LegalSite from 'assets/images/our-work/legal-site.png'
-import { AnimationSection, H2, OurWorkTile, TextWithLikes } from 'components'
+import { AnimationContainer, H2, OurWorkTile, TextWithLikes } from 'components'
 import { useRouter } from 'next/navigation'
 import clsx from 'clsx'
 
@@ -54,41 +54,35 @@ export const OurWork = () => {
         id='our-work'
         className={clsx('-translate-y-20', 'md:-translate-y-10')}
       />
-      <div
-        className={clsx(
+      <AnimationContainer
+        classNames={clsx(
           'w-[1568px] px-8 pt-[90px] pb-[100px]',
           'md:px-16 md:pt-[140px] md:pb-[180px]'
         )}
       >
-        <AnimationSection>
-          <H2 className='text-center'>Our work</H2>
-          <div
-            className={clsx('grid grid-cols-1 gap-6 mt-14', 'md:grid-cols-2')}
-          >
-            {data.map(
-              ({ title, titleColor, subtitle, image, action }, index) => {
-                return (
-                  <OurWorkTile
-                    titleColor={titleColor}
-                    key={index}
-                    title={title}
-                    subtitle={subtitle}
-                    image={image}
-                    action={action}
-                  />
-                )
-              }
-            )}
-          </div>
-          <div className={clsx('mt-20', 'md:mt-44')}>
-            <TextWithLikes
-              text='Startups create a world that actually is better. Any problem that
+        <H2 className='text-center'>Our work</H2>
+        <div className={clsx('grid grid-cols-1 gap-6 mt-14', 'md:grid-cols-2')}>
+          {data.map(({ title, titleColor, subtitle, image, action }, index) => {
+            return (
+              <OurWorkTile
+                titleColor={titleColor}
+                key={index}
+                title={title}
+                subtitle={subtitle}
+                image={image}
+                action={action}
+              />
+            )
+          })}
+        </div>
+        <div className={clsx('mt-20', 'md:mt-44')}>
+          <TextWithLikes
+            text='Startups create a world that actually is better. Any problem that
           can be solved, will be solved by a startup, and that is a huge
           opportunity.'
-            />
-          </div>
-        </AnimationSection>
-      </div>
+          />
+        </div>
+      </AnimationContainer>
     </div>
   )
 }
