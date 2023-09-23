@@ -20,8 +20,8 @@ export const Header = () => {
     >
       <div
         className={clsx(
-          'w-[1568px] px-8 pt-[140px] pb-[196px] flex justify-start',
-          'md:px-16'
+          'w-[1568px] px-8 pt-[140px] pb-[196px] flex justify-start h-[calc(100vh-90px)] items-center',
+          'md:px-16 md:h-[calc(100vh-118px)]'
         )}
       >
         <div>
