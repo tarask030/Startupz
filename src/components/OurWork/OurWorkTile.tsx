@@ -28,7 +28,7 @@ export const OurWorkTile = ({
       <div className='justify-center flex mt-5'>
         <P className='max-w-[380px]'>{subtitle}</P>
       </div>
-      <div className='justify-center flex'>
+      <div className='justify-center flex mt-3'>
         <Image priority src={image} alt='Our work' className='w-2/3' />
       </div>
       <div className='justify-center flex mt-4'>

@@ -3,15 +3,26 @@ import Logo from 'assets/logo.svg'
 import Twitter from 'assets/social/twitter.svg'
 import Linkedin from 'assets/social/linkedin.svg'
 import Instagram from 'assets/social/instagram.svg'
-import { P } from 'components'
+import { P, AnimationSection } from 'components'
 import clsx from 'clsx'
+import Link from 'next/link'
 
-export const Footer = () => {
-  return (
-    <div className='bg-gray-400 justify-center flex items-center'>
-      <div className={clsx('w-[1568px] p-8 md:p-16')}>
-        <div className='w-full flex-col-reverse flex md:justify-between p-8 gap-y-10 md:gap-x-[155px] lg:flex-row'>
-          <div className='flex-col-reverse gap-y-8 smm:flex-row flex justify-between w-full lg:w-1/2'>
+export const Footer = () => (
+  <div className='bg-gray-400 justify-center flex items-center'>
+    <div className={clsx('w-[1568px] p-8', 'md:p-16')}>
+      <AnimationSection>
+        <div
+          className={clsx(
+            'w-full flex-col-reverse flex md:justify-between p-8 gap-y-10',
+            'lg:flex-row md:gap-x-[100px] xl:gap-x-[155px] '
+          )}
+        >
+          <div
+            className={clsx(
+              'flex-col-reverse gap-y-8 flex justify-between w-full',
+              'smm:flex-row  lg:w-1/2'
+            )}
+          >
             <div>
               <Image
                 priority
@@ -28,12 +39,21 @@ export const Footer = () => {
               <span className='text-blue-900 text-[18px] font-normal'>
                 Companies
               </span>
-              <div className='mt-5 flex gap-y-1 flex-col w-28'>
-                <P className='text-blue-500'>Tolq</P>
-                <P className='text-blue-500'>LegalSite</P>
-                <P className='text-blue-500'>Codekeeper</P>
-                <P className='text-blue-500'>Feedback Labs</P>
-              </div>
+              <ul className='mt-5 flex gap-y-1 flex-col w-28'>
+                <li className='list-none text-blue-500'>
+                  <Link href='#our-work'>Tolq</Link>
+                </li>
+                <li className='list-none text-blue-500'>
+                  <Link href='#our-work'>LegalSite</Link>
+                </li>
+
+                <li className='list-none text-blue-500'>
+                  <Link href='#our-work'>Codekeeper</Link>
+                </li>
+                <li className='list-none text-blue-500'>
+                  <Link href='#our-work'>Feedback Labs</Link>
+                </li>
+              </ul>
             </div>
           </div>
           <div className='flex-col-reverse gap-y-8 smm:flex-row flex justify-between w-full lg:w-1/2'>
@@ -45,32 +65,36 @@ export const Footer = () => {
                 World Trade Center - The Hague Prinses Margrietplantsoen 33 2595
                 AM The Hague The Netherlands
               </P>
-              <P className='text-blue-500 mt-[11px]'>Send us an email</P>
+              <Link href='#contact'>
+                <P className='text-blue-500 mt-[11px]'>Send us an email</P>
+              </Link>
             </div>
 
             <div className='w-28'>
               <span className='text-blue-900 text-[18px] font-normal'>
                 Follow us
               </span>
-              <div className='flex flex-col gap-y-[15px] mt-5'>
-                <a href='https://twitter.com/' target='_blank'>
+              <div
+                className={clsx('flex flex-row gap-[15px] mt-5', 'md:flex-col')}
+              >
+                <Link href='https://twitter.com/' target='_blank'>
                   <Image priority src={Twitter} alt='Follow us on Twitter' />
-                </a>
-                <a href='https://www.linkedin.com/' target='_blank'>
+                </Link>
+                <Link href='https://www.linkedin.com/' target='_blank'>
                   <Image priority src={Linkedin} alt='Follow us on Linkedin' />
-                </a>
-                <a href='https://www.instagram.com/' target='_blank'>
+                </Link>
+                <Link href='https://www.instagram.com/' target='_blank'>
                   <Image
                     priority
                     src={Instagram}
                     alt='Follow us on Instagram'
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </AnimationSection>
     </div>
-  )
-}
+  </div>
+)

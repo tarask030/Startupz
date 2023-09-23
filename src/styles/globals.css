@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,5 +15,5 @@
 
 @font-face {
   font-family: 'Circular-700';
-  src: url('../../public/fonts/CircularStd-Book.woff2');
+  src: url('../../public/fonts/CircularStd-Bold.woff2');
 }

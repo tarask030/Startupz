@@ -7,9 +7,7 @@ export const TextWithLikes = ({ text }: { text: string }) => (
     <div className='w-16 flex justify-center mb-5'>
       <Image src={Like} alt='Like' />
     </div>
-    <Label className='text-orange-500 text-[40px] font-bold max-w-[882px] text-center'>
-      {text}
-    </Label>
+    <Label className='text-orange-500 max-w-[882px] text-center'>{text}</Label>
     <div className='w-16 transform -scale-x-100 mb-5 hidden md:flex'>
       <Image src={Like} alt='Like' />
     </div>

@@ -2,11 +2,17 @@ import Tolq from 'assets/images/our-work/tolq.png'
 import FeedbackLabs from 'assets/images/our-work/feedback-labs.png'
 import Codekeeper from 'assets/images/our-work/codekeeper.png'
 import LegalSite from 'assets/images/our-work/legal-site.png'
-import Like from 'assets/images/like.png'
-import { H3, OurWorkTile, TextWithLikes } from 'components'
-import Image from 'next/image'
+import { AnimationSection, H2, OurWorkTile, TextWithLikes } from 'components'
+import { useRouter } from 'next/navigation'
+import clsx from 'clsx'
 
 export const OurWork = () => {
+  const { push } = useRouter()
+
+  const handleTurnToContact = () => {
+    push('#contact')
+  }
+
   const data = [
     {
       title: 'Tolq',
@@ -14,7 +20,7 @@ export const OurWork = () => {
       subtitle:
         'Tolq is the translation solution built for e-commerce. It provides all pieces of the localization puzzle in one single integrated solution.',
       image: Tolq,
-      action: () => console.log('More about Tolq'),
+      action: handleTurnToContact,
     },
     {
       title: 'Feedback Labs',
@@ -22,7 +28,7 @@ export const OurWork = () => {
       subtitle:
         'Feedback Labs turns feedback into actionable insights for your team.',
       image: FeedbackLabs,
-      action: () => console.log('More about Feedback Labs'),
+      action: handleTurnToContact,
     },
     {
       title: 'Codekeeper',
@@ -30,7 +36,7 @@ export const OurWork = () => {
       subtitle:
         'Codekeeper is an all-in-one solution for software developers and publishers to provide source code escrow as part of service level and license agreements.',
       image: Codekeeper,
-      action: () => console.log('More about Codekeeper'),
+      action: handleTurnToContact,
     },
     {
       title: 'LegalSite',
@@ -38,35 +44,50 @@ export const OurWork = () => {
       subtitle:
         'Protected against legal risks, privacy compliant and always up-to-date with the latest regulatory developments.',
       image: LegalSite,
-      action: () => console.log('More about LegalSite'),
+      action: handleTurnToContact,
     },
   ]
 
   return (
     <div className='flex justify-center'>
-      <div className='w-[1568px] px-8 pt-[140px] pb-[180px] md:px-16'>
-        <H3 className='text-center'>Our work</H3>
-        <div className='grid grid-cols-1 gap-6 mt-14 md:grid-cols-2'>
-          {data.map(({ title, titleColor, subtitle, image, action }, index) => {
-            return (
-              <OurWorkTile
-                titleColor={titleColor}
-                key={index}
-                title={title}
-                subtitle={subtitle}
-                image={image}
-                action={action}
-              />
-            )
-          })}
-        </div>
-        <div className='mt-44'>
-          <TextWithLikes
-            text='Startups create a world that actually is better. Any problem that
+      <div
+        id='our-work'
+        className={clsx('-translate-y-20', 'md:-translate-y-10')}
+      />
+      <div
+        className={clsx(
+          'w-[1568px] px-8 pt-[90px] pb-[100px]',
+          'md:px-16 md:pt-[140px] md:pb-[180px]'
+        )}
+      >
+        <AnimationSection>
+          <H2 className='text-center'>Our work</H2>
+          <div
+            className={clsx('grid grid-cols-1 gap-6 mt-14', 'md:grid-cols-2')}
+          >
+            {data.map(
+              ({ title, titleColor, subtitle, image, action }, index) => {
+                return (
+                  <OurWorkTile
+                    titleColor={titleColor}
+                    key={index}
+                    title={title}
+                    subtitle={subtitle}
+                    image={image}
+                    action={action}
+                  />
+                )
+              }
+            )}
+          </div>
+          <div className={clsx('mt-20', 'md:mt-44')}>
+            <TextWithLikes
+              text='Startups create a world that actually is better. Any problem that
           can be solved, will be solved by a startup, and that is a huge
           opportunity.'
-          />
-        </div>
+            />
+          </div>
+        </AnimationSection>
       </div>
     </div>
   )
