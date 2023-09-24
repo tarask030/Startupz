@@ -22,7 +22,7 @@ export const SolvingProblems = () => (
         >
           <div
             className={clsx(
-              'bg-green-500 w-[260px] text-white px-[18px] py-[14px] h-[70px] text-[14px]',
+              'bg-blue-600 w-[260px] text-white px-[18px] py-[14px] h-[70px] text-[14px]',
               'rounded-bl-full rounded-tl-full rounded-tr-full shadow-lg select-none'
             )}
           >

@@ -11,7 +11,7 @@ export type TextProps = {
 
 const styles = {
   h1: 'text-[56px] font-bold font-circular_700 md:text-[85px]',
-  h2: 'text-[32px] font-bold font-circular_700 md:text-6xl',
+  h2: 'text-[32px] text-blue-900 font-bold font-circular_700 md:text-6xl',
   h3: 'text-[25px] font-bold font-circular_700 md:text-[50px]',
   h4: 'text-[22px] font-bold font-circular_700 md:text-[25px] lg:text-[32px]',
   h5: 'text-[22px] font-normal font-circular_400 md:text-2xl',

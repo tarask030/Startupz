@@ -1,5 +1,5 @@
 import {
-  ContactForm,
+  Contact,
   Footer,
   OurCoreValues,
   OurWork,
@@ -12,24 +12,22 @@ import {
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>We Create Startups.</title>
-        <meta name='description' content='Startupz. We Create Startups.' />
-      </Head>
-      <NavBar />
-      <Header />
-      <WhoWeAre />
-      <SolvingProblems />
-      <OurCoreValues />
-      <OurWork />
-      <WeAreHiring />
-      <ContactForm />
-      <Footer />
-    </>
-  )
-}
+const Home: NextPage = () => (
+  <>
+    <Head>
+      <title>We Create Startups.</title>
+      <meta name='description' content='Startupz. We Create Startups.' />
+    </Head>
+    <NavBar />
+    <Header />
+    <WhoWeAre />
+    <SolvingProblems />
+    <OurCoreValues />
+    <OurWork />
+    <WeAreHiring />
+    <Contact />
+    <Footer />
+  </>
+)
 
 export default Home

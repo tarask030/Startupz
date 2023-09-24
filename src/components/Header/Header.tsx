@@ -27,7 +27,7 @@ export const Header = () => {
         <div>
           <H1
             className={clsx(
-              'leading-[55px] font-circular',
+              'leading-[55px] font-circular text-blue-900',
               'md:leading-[85px]'
             )}
           >
@@ -43,12 +43,13 @@ export const Header = () => {
           >
             We are startup studio that develops and launches new companies.
           </H5>
-          <Button
-            className='mt-6'
-            text='See our works'
-            action={handleTurnToOurWork}
-            backgroundColor='blue'
-          />
+          <div className='mt-6'>
+            <Button
+              text='See our works'
+              action={handleTurnToOurWork}
+              backgroundColor='blue'
+            />
+          </div>
         </div>
       </div>
       <div className={clsx('absolute right-0 w-[50%]', 'md:max-w-[900px]')}>

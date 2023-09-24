@@ -16,7 +16,7 @@ export const OurWork = () => {
   const data = [
     {
       title: 'Tolq',
-      titleColor: 'text-green-600',
+      titleColor: 'text-green-500',
       subtitle:
         'Tolq is the translation solution built for e-commerce. It provides all pieces of the localization puzzle in one single integrated solution.',
       image: Tolq,
@@ -32,7 +32,7 @@ export const OurWork = () => {
     },
     {
       title: 'Codekeeper',
-      titleColor: 'text-green-500',
+      titleColor: 'text-blue-500',
       subtitle:
         'Codekeeper is an all-in-one solution for software developers and publishers to provide source code escrow as part of service level and license agreements.',
       image: Codekeeper,

@@ -30,11 +30,10 @@ export const WeAreHiring = () => {
             to join and help build our startups. <br /> Check out our current
             openings
           </H5>
-          <div className='flex justify-center'>
+          <div className='flex justify-center mt-[30px]'>
             <Button
               text='See current openings'
               backgroundColor='blue'
-              className='mt-[30px]'
               action={handleTurnToContact}
             />
           </div>

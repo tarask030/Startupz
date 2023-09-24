@@ -16,12 +16,12 @@ export const NavBar = () => {
 
   const Menu = ({ className }: { className: string }) => (
     <ul className={className}>
-      <li className='list-none'>
+      <li className='list-none text-blue-900'>
         <Link href='#startups' onClick={() => setIsMobileMenuOpen(false)}>
           Startups
         </Link>
       </li>
-      <li className='list-none'>
+      <li className='list-none text-blue-900'>
         <Link href='#contact' onClick={() => setIsMobileMenuOpen(false)}>
           Contact
         </Link>
@@ -30,7 +30,7 @@ export const NavBar = () => {
   )
 
   return (
-    <div className='flex justify-center bg-white fixed w-full z-10'>
+    <div className='flex justify-center bg-white fixed w-full z-20'>
       <div
         className={clsx(
           'py-[20px] max-w-[1568px] w-full px-8 justify-between items-center flex',
