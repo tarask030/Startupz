@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -16,18 +14,25 @@ bun run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Check The Contact Form
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The results of the form on Vercel are sent to my email address. To set it up for yourself, you need to:
 
-## Learn More
+1. Install this repository locally.
 
-To learn more about Next.js, take a look at the following resources:
+2. Create a password on your Google account:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+It would help if you generated an app password to use nodemailer.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- First, you need to turn on two-factor-authentication.
+- And then in your manage account go to security.
+- You can see the app password below two-step verification.
+- Go to app password select and other and write custom app name (example project name) and click on generate.
+- You get a password use that password instead of your mail password.
+
+3. Rename the .env.example file to .env in the project.
+4. Paste in the file .env password without spaces in the EMAIL_PASS line, and insert your email in the EMAIL line.
+5. If you did everything right - congratulations, the form is working!
 
 ## Deploy on Vercel
 
